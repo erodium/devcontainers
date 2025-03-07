@@ -29,7 +29,11 @@
                 "ms-python.python",
                 "esbenp.prettier-vscode",
 				"amazonwebservices.aws-toolkit-vscode",
-			
+				"njpwerner.autodocstring",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"oderwat.indent-rainbow",
+				"deerawan.vscode-dash"
             ]
         },
 		"settings": {
