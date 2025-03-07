@@ -33,7 +33,6 @@
             ]
         },
 		"settings": {
-			"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
 			"python.linting.enabled": true,
 			"python.linting.pylintEnabled": false, // We use flake8
 			"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
