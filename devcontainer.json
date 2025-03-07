@@ -1,5 +1,5 @@
 {
-	"name": "Java & Typescript",
+	"name": "Liam's AWS CDK with Python and Poetry DevContainer",
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	"features": {
