@@ -1,0 +1,57 @@
+{
+	"name": "Liam's Django DevContainer",
+    "dockerComposeFile": "../docker-compose.yaml",
+    // Which service inside dockerComposeFile to attach to 
+    "service": "app",
+    // Attach directory within the service container
+    "workspaceFolder": "/app",
+    "features": {
+        // Install git for your dev environment
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {}
+    },
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "esbenp.prettier-vscode",
+				"njpwerner.autodocstring",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"oderwat.indent-rainbow",
+				"deerawan.vscode-dash",
+                "batisteo.vscode-django"
+            ]
+        },
+		"settings": {
+            "python.defaultInterpreterPath": "/usr/local/bin/python3",
+			"python.linting.enabled": true,
+			"python.linting.pylintEnabled": false, // We use flake8
+			"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+			"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+			"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+			"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+			"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+			"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+			"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+			"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+			"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+            // Django manage.py unit testing arguments
+            "python.testing.unittestArgs": ["--no-input"],
+            // Enable unittest-based Python tests
+            "python.testing.unittestEnabled": true
+      	}
+    },
+
+	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+	"remoteUser": "vscode",
+
+	"mounts": [
+		"source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+	]
+}
